@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yono Games – Rummy Apps &amp; Slots Games</title>
+  <meta name="description" content="Play Rummy, Teen Patti &amp; Slots on trusted Yono apps. Claim ₹500–₹1500 bonus, enjoy secure withdrawals &amp; discover all Yono games at one place." />
+  <meta name="keywords" content="Yono Games, Yono Rummy, Rummy Apps India, Slots Games, Yono VIP, Yono Bonus" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red: #2e7d32;       /* Reusing var(--red) for the new green theme */
+      --red-dark: #1b5e20;
+      --red-light: #4caf50;
+      --green: #1a8c3c;
+      --green-dark: #145a2e;
+      --teal: #00c9b1;
+      --blue-tg: #2CA5E0;
+      --text: #1a1a1a;
+      --text-muted: #555;
+      --border: #e0e0e0;
+      --card-bg: #fff;
+      --page-bg: #f1f4f8;
+      --nav-bg: #fff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--page-bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ========== HEADER ========== */
+    #site-header {
+      background: linear-gradient(135deg, #4caf50 0%, #2e7d32 60%, #1b5e20 100%);
+      color: #fff;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .site-logo {
+      width: 56px;
+      height: 56px;
+      background: #1a3a1a;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 2px solid rgba(255,255,255,0.3);
+      overflow: hidden;
+    }
+
+    .site-logo svg {
+      width: 44px;
+      height: 44px;
+    }
+
+    .site-title {
+      font-size: clamp(1rem, 3.5vw, 1.35rem);
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+      color: #fff;
+    }
+
+    .hamburger-btn {
+      background: rgba(255,255,255,0.15);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      padding: 8px 10px;
+      cursor: pointer;
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      transition: background 0.2s;
+    }
+    .hamburger-btn:hover { background: rgba(255,255,255,0.28); }
+    .hamburger-btn span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    /* ========== NAV BAR ========== */
+    #main-nav {
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav-list::-webkit-scrollbar { display: none; }
+
+    .nav-list li a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 12px 28px;
+      text-decoration: none;
+      color: #555;
+      font-size: 0.78rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+    }
+
+    .nav-list li a:hover { color: var(--red); }
+    .nav-list li a.active { color: var(--red); border-bottom-color: var(--red); }
+
+    .nav-icon {
+      font-size: 1.15rem;
+      line-height: 1;
+    }
+
+    /* Mobile nav */
+    #mobile-menu {
+      display: none;
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 0;
+    }
+    #mobile-menu.open { display: block; }
+    #mobile-menu a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #444;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    #mobile-menu a:hover { background: #fff6f6; color: var(--red); }
+
+    /* ========== MAIN CONTENT ========== */
+    #main-content {
+      max-width: 860px;
+      margin: 24px auto;
+      padding: 0 12px;
+    }
+
+    /* ========== HERO TITLE ========== */
+    .hero-title {
+      text-align: center;
+      font-size: clamp(1.3rem, 5vw, 2rem);
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    /* ========== DESCRIPTION BOX ========== */
+    .desc-box {
+      background: linear-gradient(135deg, #1a2a1a 0%, #0d3d2e 50%, #006b6b 100%);
+      color: #e8f5e9;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 0.78rem;
+      line-height: 1.65;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+
+    /* ========== DOWNLOAD SECTION TITLE ========== */
+    .section-title {
+      text-align: center;
+      font-size: clamp(1rem, 3.5vw, 1.25rem);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    /* ========== TABS ========== */
+    .tabs-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: 18px;
+      background: #fff;
+    }
+
+    .tab-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 10px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      background: var(--red);
+      color: #fff;
+    }
+
+    .tab-btn.inactive {
+      background: #fff;
+      color: #555;
+    }
+    .tab-btn.inactive:hover { background: #fef2f2; color: var(--red); }
+
+    .tab-icon { font-size: 1.1rem; }
+
+    /* ========== APP CARDS ========== */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .app-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .app-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+    .app-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+      transform: translateY(-1px);
+    }
+
+    .app-card.featured {
+      border-left: 4px solid var(--red);
+    }
+
+    .rank-badge {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 26px;
+      height: 26px;
+      background: var(--red);
+      color: #fff;
+      border-radius: 12px 0 12px 0;
+      font-size: 0.7rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app-icon-wrap {
+      width: 68px;
+      height: 68px;
+      border-radius: 14px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #1a3a1a, #0d2a1a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.55rem;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      line-height: 1.2;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+    }
+
+    .app-icon-wrap.icon-red { background: linear-gradient(135deg, #c62828, #e53935); }
+    .app-icon-wrap.icon-blue { background: linear-gradient(135deg, #1565c0, #1976d2); }
+    .app-icon-wrap.icon-orange { background: linear-gradient(135deg, #e65100, #f57c00); }
+    .app-icon-wrap.icon-purple { background: linear-gradient(135deg, #6a1b9a, #8e24aa); }
+    .app-icon-wrap.icon-teal { background: linear-gradient(135deg, #00695c, #00897b); }
+    .app-icon-wrap.icon-navy { background: linear-gradient(135deg, #1a237e, #283593); }
+    .app-icon-wrap.icon-pink { background: linear-gradient(135deg, #880e4f, #c2185b); }
+    .app-icon-wrap.icon-brown { background: linear-gradient(135deg, #4e342e, #6d4c41); }
+    .app-icon-wrap.icon-gold { background: linear-gradient(135deg, #f57f17, #f9a825); }
+    .app-icon-wrap.icon-green { background: linear-gradient(135deg, #1b5e20, #2e7d32); }
+    .app-icon-wrap.icon-cyan { background: linear-gradient(135deg, #006064, #00838f); }
+    .app-icon-wrap.icon-dark { background: linear-gradient(135deg, #212121, #424242); }
+
+    .app-icon-text {
+      font-size: 0.6rem;
+      font-weight: 800;
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      padding: 4px;
+      line-height: 1.25;
+    }
+
+    .app-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .app-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .app-bonus {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.82rem;
+      color: var(--red);
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .app-withdraw {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.8rem;
+      color: #555;
+      font-weight: 500;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #111;
+      color: #fff;
+      border: none;
+      border-radius: 9px;
+      padding: 11px 18px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .download-btn:hover {
+      background: #2e7d32;
+      transform: scale(1.04);
+    }
+
+    /* ========== FLOATING BUTTONS ========== */
+    .float-group {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      z-index: 999;
+    }
+
+    .float-badge {
+      background: #00c853;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 2px 8px rgba(0,200,83,0.4);
+      animation: pulse-badge 2s infinite;
+    }
+
+    @keyframes pulse-badge {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
+
+    .tg-float-btn {
+      width: 54px;
+      height: 54px;
+      background: var(--blue-tg);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(44,165,224,0.5);
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: float-anim 3s ease-in-out infinite;
+    }
+    .tg-float-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 24px rgba(44,165,224,0.65);
+    }
+
+    @keyframes float-anim {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .tg-float-btn svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+
+    /* ========== DISCLAIMER SECTION ========== */
+    .disclaimer-section {
+      max-width: 860px;
+      margin: 36px auto;
+      padding: 0 16px;
+    }
+
+    .disclaimer-card {
+      background: linear-gradient(145deg, #e8f5e9 0%, #c8e6c9 100%);
+      border-radius: 12px;
+      border: 2px solid #2e7d32;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(46, 125, 50, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .disclaimer-card::before {
+      content: "⚠️";
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      font-size: 8rem;
+      opacity: 0.08;
+      transform: rotate(15deg);
+    }
+
+    .disclaimer-card h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #1b5e20;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .disclaimer-card p {
+      font-size: 0.9rem;
+      color: #0b3d0b;
+      line-height: 1.7;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .alert-card {
+      background: #fff;
+      border-radius: 8px;
+      border-left: 6px solid #1b5e20;
+      padding: 16px;
+      margin-top: 16px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .alert-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #1b5e20;
+      margin-bottom: 8px;
+    }
+
+    .alert-card p {
+      font-size: 0.85rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* ========== FOOTER ========== */
+    #site-footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px 16px;
+      margin-top: 36px;
+      font-size: 0.78rem;
+      line-height: 1.7;
+    }
+
+    #site-footer p { margin-bottom: 6px; }
+    #site-footer .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; margin-top: 8px; }
+    #site-footer .footer-links a { color: #ccc; text-decoration: none; font-size: 0.78rem; }
+    #site-footer .footer-links a:hover { color: var(--red); }
+    #site-footer .footer-sep { color: #666; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 640px) {
+      .hamburger-btn { display: flex; }
+      #main-nav { display: none; }
+      #main-nav.mobile-show { display: block; }
+
+      .download-btn { padding: 9px 12px; font-size: 0.78rem; }
+      .app-name { font-size: 0.9rem; }
+      .app-icon-wrap { width: 58px; height: 58px; }
+      .app-card { padding: 12px; gap: 10px; }
+
+      .nav-list li a { padding: 10px 16px; }
+    }
+
+    @media (max-width: 400px) {
+      .app-bonus, .app-withdraw { font-size: 0.74rem; }
+      .download-btn { padding: 8px 10px; font-size: 0.74rem; }
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- ===== HEADER ===== -->
+<header id="site-header">
+  <div class="header-left">
+    <div class="site-logo" aria-label="Yono Games Logo">
+      <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="20" stroke="white" stroke-width="2" fill="#1a4d1a"/>
+        <text x="22" y="20" text-anchor="middle" fill="white" font-size="6.5" font-family="Arial" font-weight="bold">YONO</text>
+        <text x="22" y="29" text-anchor="middle" fill="white" font-size="5.5" font-family="Arial" font-weight="bold">GAMES</text>
+      </svg>
+    </div>
+    <h1 class="site-title">Yono Games</h1>
+  </div>
+  <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ===== DESKTOP NAV ===== -->
+<nav id="main-nav" aria-label="Main Navigation">
+  <ul class="nav-list">
+    <li>
+      <a href="#home" class="active" id="nav-home">
+        <span class="nav-icon">🏠</span>
+        <span>Home</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div id="mobile-menu">
+  <a href="#home" onclick="closeMobileMenu()">🏠 &nbsp;Home</a>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main id="main-content">
+
+  <section id="home">
+    <h2 class="hero-title">YONO GAMES India</h2>
+
+    <div class="desc-box">
+      Yono Games is a popular platform where players can explore a wide collection of real money gaming apps in one place. From rummy tables to slot spins and bingo games, users can enjoy multiple categories like Rummy, Slots, Bingo, Arcade, and Spin games with daily rewards. This collection includes many trending apps such as Yono Bonus, Bingo 101, Rumble Rummy, Joy Rummy, DIWA 777, INR Rummy, Boss Rummy, Ever 777, Yono 777, Rummy 888, Rummy 77, Rummy Ludo, 777 Game, OK Rummy, Good Slots, Hindi 777, Club INR, Game Rummy, Yes Spin, Love Rummy, Share Slots, Maha Games, Hi-Rummy, Jaiho Win, IND Club, Jaiho Slots, TOP Rummy, Ind Rummy, Slots Spin, MQM Bet, Saga Slots, Yn777, ABC Rummy, JaiHo Arcade, JaiHo 777, Neta VIP, Rummy 91, JaiHo Rummy, JaiHo Spin, MWM Bet, EN365, 101Z App, Rummy 365, Spin101, Ind Bingo, My777, Bet213, GoGo Rummy, 789 Jackpot, MDM Bet, Spin Gold, Spin Lucky, Spin 777, IND Slots, Spin Crush, MkM Bet, Slots Winner, Spin Winner, MBM Bet, 567 Slots, Yono VIP, Yono Slots, Yono Arcade, Yono Rummy, Yono Game, Yono Games!
+    </div>
+
+    <p class="section-title">Download NEW YONO Games</p>
+
+    <!-- TAB BUTTONS -->
+    <div class="tabs-wrapper" role="tablist">
+      <button class="tab-btn active" id="tab-new" role="tab" aria-selected="true" aria-controls="panel-new" onclick="switchTab('new')">
+        <span class="tab-icon">⭐</span> New Games
+      </button>
+      <button class="tab-btn inactive" id="tab-other" role="tab" aria-selected="false" aria-controls="panel-other" onclick="switchTab('other')">
+        <span class="tab-icon">🎮</span> Other Games
+      </button>
+    </div>
+
+    <!-- NEW GAMES TAB -->
+    <div id="panel-new" class="tab-panel active" role="tabpanel" aria-labelledby="tab-new">
+      <div class="app-list">
+
+
+
+        <!-- #1 -->
+        <div class="app-card">
+          <div class="rank-badge">1</div>
+          <div class="app-icon-wrap icon-gold"><img src="https://yonogamespro.com/wp-content/uploads/apps/ClubINR.webp" alt="club inr logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Club INR</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹505</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="https://inrrummy1.win/?code=8QU5PR8JKQV&t=1777282953" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #2 -->
+        <div class="app-card">
+          <div class="rank-badge">2</div>
+          <div class="app-icon-wrap icon-red"><img src="https://yonogamespro.com/wp-content/uploads/apps/inrrummy.webp" alt="inr rummy logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">INR Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹560</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #3 -->
+        <div class="app-card">
+          <div class="rank-badge">3</div>
+          <div class="app-icon-wrap icon-orange"><img src="https://yonogamespro.com/wp-content/uploads/apps/RumbleRummy.webp" alt="rumble rummy logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Rumble Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹533</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #4 -->
+        <div class="app-card">
+          <div class="rank-badge">4</div>
+          <div class="app-icon-wrap icon-blue"><img src="https://yonogamespro.com/wp-content/uploads/apps/bingo101.webp" alt="bingo 101 logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Bingo 101</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹441</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #5 -->
+        <div class="app-card">
+          <div class="rank-badge">5</div>
+          <div class="app-icon-wrap icon-teal"><img src="https://yonogamespro.com/wp-content/uploads/apps/spin101.webp" alt="spin101 logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Spin101</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹579</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #6 -->
+        <div class="app-card">
+          <div class="rank-badge">6</div>
+          <div class="app-icon-wrap icon-pink">
+            <div class="app-icon-text">SPIN<br/>WINNER</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Spin Winner</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹97</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+        <!-- #7 -->
+        <div class="app-card">
+          <div class="rank-badge">7</div>
+          <div class="app-icon-wrap icon-teal">
+            <div class="app-icon-text">JAIHO<br/>SPIN</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">JaiHo Spin</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹400</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #8 -->
+        <div class="app-card">
+          <div class="rank-badge">8</div>
+          <div class="app-icon-wrap icon-navy"><img src="https://allnewyonoapps.com/Goa-Spin.webp" alt="goa spin logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Goa Spin</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹47</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #9 -->
+        <div class="app-card">
+          <div class="rank-badge">9</div>
+          <div class="app-icon-wrap icon-teal">
+            <div class="app-icon-text">RUMMY<br/>888</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Rummy 888</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹888</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+        <!-- #10 -->
+        <div class="app-card">
+          <div class="rank-badge">10</div>
+          <div class="app-icon-wrap icon-pink">
+            <div class="app-icon-text">JAIHO<br/>91</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Jaiho 91</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹380</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+
+
+        <!-- #11 -->
+        <div class="app-card">
+          <div class="rank-badge">11</div>
+          <div class="app-icon-wrap icon-navy">
+            <div class="app-icon-text">BOSS<br/>RUMMY</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Boss Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #12 -->
+        <div class="app-card">
+          <div class="rank-badge">12</div>
+          <div class="app-icon-wrap icon-gold"><img src="https://yonogamespro.com/wp-content/uploads/apps/Yono-777.webp" alt="yono 777 logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Yono 777</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹777</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #13 -->
+        <div class="app-card">
+          <div class="rank-badge">13</div>
+          <div class="app-icon-wrap icon-red">
+            <div class="app-icon-text">JOY<br/>RUMMY</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Joy Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹450</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #14 -->
+        <div class="app-card">
+          <div class="rank-badge">14</div>
+          <div class="app-icon-wrap icon-teal">
+            <div class="app-icon-text">SLOTS<br/>WINNER</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Slots Winner</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹97</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #15 -->
+        <div class="app-card">
+          <div class="rank-badge">15</div>
+          <div class="app-icon-wrap icon-gold">
+            <div class="app-icon-text">RUMMY<br/>77</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Rummy 77</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #16 -->
+        <div class="app-card">
+          <div class="rank-badge">16</div>
+          <div class="app-icon-wrap icon-gold">
+            <div class="app-icon-text">RUMMY<br/>LUDO</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Rummy Ludo</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹350</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #17 -->
+        <div class="app-card">
+          <div class="rank-badge">17</div>
+          <div class="app-icon-wrap icon-gold"><img src="https://yonogamespro.com/wp-content/uploads/apps/777Game.webp" alt="777.game logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">777.Game</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹777</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #18 -->
+        <div class="app-card">
+          <div class="rank-badge">18</div>
+          <div class="app-icon-wrap icon-purple"><img src="https://yonogamespro.com/wp-content/uploads/apps/ever777.webp" alt="ever 777 logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Ever 777</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹450</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+        <!-- #19 -->
+        <div class="app-card">
+          <div class="rank-badge">19</div>
+          <div class="app-icon-wrap icon-orange"><img src="https://yonogamespro.com/wp-content/uploads/apps/Hindi777.webp" alt="hindi 777 logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Hindi 777</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #20 -->
+        <div class="app-card">
+          <div class="rank-badge">20</div>
+          <div class="app-icon-wrap icon-teal"><img src="https://yonogamespro.com/wp-content/uploads/apps/yn777.webp" alt="yn777 logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Yn777</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹300</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #21 -->
+        <div class="app-card">
+          <div class="rank-badge">21</div>
+          <div class="app-icon-wrap icon-orange">
+            <div class="app-icon-text">YES<br/>SPIN</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Yes Spin</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹380</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #22 -->
+        <div class="app-card">
+          <div class="rank-badge">22</div>
+          <div class="app-icon-wrap icon-red"><img src="https://yonogamespro.com/wp-content/uploads/apps/ok-rummy.webp" alt="ok rummy logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">OK Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #23 -->
+        <div class="app-card">
+          <div class="rank-badge">23</div>
+          <div class="app-icon-wrap icon-teal">
+            <div class="app-icon-text">LOVE<br/>RUMMY</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Love Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹450</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #24 -->
+        <div class="app-card">
+          <div class="rank-badge">24</div>
+          <div class="app-icon-wrap icon-pink">
+            <div class="app-icon-text">SHARE<br/>SLOTS</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Share Slots</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹300</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #25 -->
+        <div class="app-card">
+          <div class="rank-badge">25</div>
+          <div class="app-icon-wrap icon-gold"><img src="https://yonogamespro.com/wp-content/uploads/apps/MahaGames.webp" alt="maha games logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Maha Games</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #26 -->
+        <div class="app-card">
+          <div class="rank-badge">26</div>
+          <div class="app-icon-wrap icon-purple">
+            <div class="app-icon-text">HI<br/>RUMMY</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Hi Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹400</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #27 -->
+        <div class="app-card">
+          <div class="rank-badge">27</div>
+          <div class="app-icon-wrap icon-navy">
+            <div class="app-icon-text">JAIHO<br/>WIN</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Jaiho Win</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹450</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #28 -->
+        <div class="app-card">
+          <div class="rank-badge">28</div>
+          <div class="app-icon-wrap icon-blue">
+            <div class="app-icon-text">IND<br/>CLUB</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">IND Club</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹350</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #29 -->
+        <div class="app-card">
+          <div class="rank-badge">29</div>
+          <div class="app-icon-wrap icon-cyan">
+            <div class="app-icon-text">JAIHO<br/>SLOTS</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Jaiho Slots</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹400</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #30 -->
+        <div class="app-card">
+          <div class="rank-badge">30</div>
+          <div class="app-icon-wrap icon-red"><img src="https://yonogamespro.com/wp-content/uploads/apps/TOPRUMMY.webp" alt="top rummy logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">TOP Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #31 -->
+        <div class="app-card">
+          <div class="rank-badge">31</div>
+          <div class="app-icon-wrap icon-cyan">
+            <div class="app-icon-text">IND<br/>RUMMY</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Ind Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹400</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #32 -->
+        <div class="app-card">
+          <div class="rank-badge">32</div>
+          <div class="app-icon-wrap icon-green">
+            <div class="app-icon-text">SLOTS<br/>SPIN</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Slots Spin</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹300</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+
+
+        <!-- #33 -->
+        <div class="app-card">
+          <div class="rank-badge">33</div>
+          <div class="app-icon-wrap icon-red">
+            <div class="app-icon-text">ABC<br/>RUMMY</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">ABC Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹400</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #34 -->
+        <div class="app-card">
+          <div class="rank-badge">34</div>
+          <div class="app-icon-wrap icon-pink">
+            <div class="app-icon-text">JAIHO<br/>ARCADE</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">JaiHo Arcade</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹350</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #35 -->
+        <div class="app-card">
+          <div class="rank-badge">35</div>
+          <div class="app-icon-wrap icon-gold">
+            <div class="app-icon-text">JAIHO<br/>777</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Jaiho 777</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹777</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #36 -->
+        <div class="app-card">
+          <div class="rank-badge">36</div>
+          <div class="app-icon-wrap icon-green">
+            <div class="app-icon-text">NETA<br/>VIP</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Neta VIP</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹600</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #37 -->
+        <div class="app-card">
+          <div class="rank-badge">37</div>
+          <div class="app-icon-wrap icon-orange">
+            <div class="app-icon-text">RUMMY<br/>91</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Rummy 91</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #38 -->
+        <div class="app-card">
+          <div class="rank-badge">38</div>
+          <div class="app-icon-wrap icon-blue"><img src="https://yonogamespro.com/wp-content/uploads/apps/jaihorummy.webp" alt="jaiho rummy logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">JaiHo Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹450</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+        <!-- #39 -->
+        <div class="app-card">
+          <div class="rank-badge">39</div>
+          <div class="app-icon-wrap icon-navy"><img src="https://allnewyonoapps.com/EN-365-YONO.webp" alt="en 365 logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">EN 365</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹365</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #40 -->
+        <div class="app-card">
+          <div class="rank-badge">40</div>
+          <div class="app-icon-wrap icon-navy">
+            <div class="app-icon-text">101Z<br/>APP</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">101Z App</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹400</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #41 -->
+        <div class="app-card">
+          <div class="rank-badge">41</div>
+          <div class="app-icon-wrap icon-green">
+            <div class="app-icon-text">RUMMY<br/>365</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Rummy 365</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹365</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #42 -->
+        <div class="app-card">
+          <div class="rank-badge">42</div>
+          <div class="app-icon-wrap icon-green">
+            <div class="app-icon-text">IND<br/>BINGO</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Ind Bingo</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹350</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+        <!-- #43 -->
+        <div class="app-card">
+          <div class="rank-badge">43</div>
+          <div class="app-icon-wrap icon-teal"><img src="https://yonogamespro.com/wp-content/uploads/apps/Bet213.webp" alt="bet213 logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Bet213</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹213</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #44 -->
+        <div class="app-card">
+          <div class="rank-badge">44</div>
+          <div class="app-icon-wrap icon-teal">
+            <div class="app-icon-text">GOGO<br/>RUMMY</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">GoGo Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹400</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #45 -->
+        <div class="app-card">
+          <div class="rank-badge">45</div>
+          <div class="app-icon-wrap icon-purple"><img src="https://yonogamespro.com/wp-content/uploads/apps/789-Jackpot.webp" alt="789 jackpot logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">789 Jackpot</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹789</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+        <!-- #46 -->
+        <div class="app-card">
+          <div class="rank-badge">46</div>
+          <div class="app-icon-wrap icon-red">
+            <div class="app-icon-text">SPIN<br/>GOLD</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Spin Gold</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #47 -->
+        <div class="app-card">
+          <div class="rank-badge">47</div>
+          <div class="app-icon-wrap icon-cyan">
+            <div class="app-icon-text">SPIN<br/>LUCKY</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Spin Lucky</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹400</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #48 -->
+        <div class="app-card">
+          <div class="rank-badge">48</div>
+          <div class="app-icon-wrap icon-purple">
+            <div class="app-icon-text">SPIN<br/>777</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Spin 777</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹777</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #49 -->
+        <div class="app-card">
+          <div class="rank-badge">49</div>
+          <div class="app-icon-wrap icon-orange">
+            <div class="app-icon-text">IND<br/>SLOTS</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">IND Slots</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹350</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #50 -->
+        <div class="app-card">
+          <div class="rank-badge">50</div>
+          <div class="app-icon-wrap icon-pink"><img src="https://yonogamespro.com/wp-content/uploads/apps/SpinCrush.webp" alt="spin crush logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Spin Crush</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹380</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+        <!-- #51 -->
+        <div class="app-card">
+          <div class="rank-badge">51</div>
+          <div class="app-icon-wrap icon-orange">
+            <div class="app-icon-text">GAME<br/>RUMMY</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Game Rummy</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+        <!-- #52 -->
+        <div class="app-card">
+          <div class="rank-badge">52</div>
+          <div class="app-icon-wrap icon-red">
+            <div class="app-icon-text">567<br/>SLOTS</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">567 Slots</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹567</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #53 -->
+        <div class="app-card">
+          <div class="rank-badge">53</div>
+          <div class="app-icon-wrap icon-pink">
+            <div class="app-icon-text">YONO<br/>VIP</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Yono VIP</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹600</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #54 -->
+        <div class="app-card">
+          <div class="rank-badge">54</div>
+          <div class="app-icon-wrap icon-purple">
+            <div class="app-icon-text">YONO<br/>SLOTS</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Yono Slots</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- #55 -->
+        <div class="app-card">
+          <div class="rank-badge">55</div>
+          <div class="app-icon-wrap icon-blue">
+            <div class="app-icon-text">YONO<br/>ARCADE</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Yono Arcade</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹450</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+        <!-- #56 -->
+        <div class="app-card">
+          <div class="rank-badge">56</div>
+          <div class="app-icon-wrap icon-navy"><img src="https://allnewyonoapps.com/INR-SLOTS.webp" alt="inr slots logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">INR SLOTS</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹400</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+    <!-- OTHER GAMES TAB -->
+    <div id="panel-other" class="tab-panel" role="tabpanel" aria-labelledby="tab-other">
+      <div class="app-list">
+
+        <div class="app-card">
+          <div class="app-icon-wrap icon-gold"><img src="https://allnewyonoapps.com/RajaLuck.webp" alt="raja luck logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Raja Luck</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹74</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon-wrap icon-purple">
+            <div class="app-icon-text">JAI<br/>CLUB</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">Jai Club</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon-wrap icon-purple"><img src="https://allnewyonoapps.com/S-vip-download.jpeg" alt="svip 777 logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;"></div>
+          <div class="app-info">
+            <div class="app-name">Svip 777</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹500</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon-wrap icon-blue">
+            <div class="app-icon-text">91<br/>CLUB</div>
+          </div>
+          <div class="app-info">
+            <div class="app-name">91 Club</div>
+            <div class="app-bonus">🎁 Sign Up Bonus ₹55</div>
+            <div class="app-withdraw">💼 Min. Withdraw ₹100</div>
+          </div>
+          <a href="#" target="_blank" rel="noopener" class="download-btn">⬇ Download</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<!-- ===== DISCLAIMER ===== -->
+<div class="disclaimer-section">
+  <div class="disclaimer-card">
+    <h2>⚠️ Important Disclaimer</h2>
+    <p><strong>Yono Games</strong> is an independent platform and does not own, manage, or operate any of the applications listed here. This website is for informational and discovery purposes only.</p>
+    <p>Please note that online gaming, especially rummy and skill-based cash games, carries financial risks and can be habit-forming. Always set strict personal limits, play responsibly, and never spend more than you can afford.</p>
+    <div class="alert-card">
+      <h3>🚨 Restricted Areas</h3>
+      <p>Cash gaming is strictly prohibited in certain regions. <strong>Do not download or play these apps if you reside in:</strong> Andhra Pradesh, Sikkim, Nagaland, Assam, Arunachal Pradesh, Tamil Nadu, Odisha, or Telangana.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer id="site-footer">
+  <p>Yono Games - Download All Yono Rummy App And Get ₹500 To ₹1500 Sign Up Bonus With Minimum Withdrawal In ₹100 Each</p>
+  <div class="footer-links">
+    <a href="#home">Yono App</a>
+    <span class="footer-sep">|</span>
+    <a href="https://allnewyonoapps.com/yonorummy/">Yono Rummy</a>
+    <span class="footer-sep">|</span>
+    <a href="https://allnewyonoapps.com/yono777/">Yono 777 App</a>
+    <span class="footer-sep">|</span>
+    <a href="https://allnewyonoapps.com/yonogames/">Yono Games</a>
+    <span class="footer-sep">|</span>
+    <a href="#home">Yono App</a>
+  </div>
+  <p style="margin-top:12px;">&copy; 2026 Yono Games. All Rights Reserved.</p>
+</footer>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<div class="float-group">
+  <div class="float-badge">📈 90%</div>
+  <a href="https://t.me/+omGsOTOlwsY0NWRl" target="_blank" rel="noopener" class="tg-float-btn" aria-label="Join Telegram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/>
+    </svg>
+  </a>
+</div>
+
+<script>
+  // Tab switching
+  function switchTab(tab) {
+    const tabs = ['new', 'other'];
+    tabs.forEach(t => {
+      const btn = document.getElementById('tab-' + t);
+      const panel = document.getElementById('panel-' + t);
+      if (t === tab) {
+        btn.classList.add('active');
+        btn.classList.remove('inactive');
+        btn.setAttribute('aria-selected', 'true');
+        panel.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+        btn.classList.add('inactive');
+        btn.setAttribute('aria-selected', 'false');
+        panel.classList.remove('active');
+      }
+    });
+  }
+
+  // Mobile menu
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('open');
+  }
+
+  function closeMobileMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+  }
+
+  // Keep Home nav always active
+  document.querySelector('#nav-home').classList.add('active');
+
+  // Smooth anchor scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
